@@ -34,8 +34,10 @@ const games=[
  {name:"PUBG Mobile",emoji:"🎯",packs:[["60 UC",16000],["325 UC",79000],["660 UC",155000],["1800 UC",390000]]},
  {name:"Genshin Impact",emoji:"✨",packs:[["60 Genesis Crystals",16000],["300 + 30 Crystals",79000],["980 + 110 Crystals",249000],["Blessing of the Welkin Moon",79000]]},
  {name:"Roblox",emoji:"🧱",packs:[["80 Robux",16000],["400 Robux",79000],["800 Robux",159000],["1700 Robux",319000]]},
- {name:"Honor of Kings",emoji:"👑",packs:[["80 Tokens",16000],["240 Tokens",49000],["400 Tokens",79000],["800 Tokens",159000]]}
-];
+ {name:"Honor of Kings",emoji:"👑",packs:[["80 Tokens",16000],["240 Tokens",49000],["400 Tokens",79000],["800 Tokens",159000]]},
+ {name:"Clash of Clans",emoji: "🏰",packs:[["Gold Pass", 0],["Paket Gems", 0]]},
+ {name: "Clash Royale",emoji: "👑",packs:[["Paket Gems", 0],["Pass Royale", 0]]},
+ {name: "Call of Duty: Mobile",emoji: "🎯",packs:[["80 CP", 0],["420 CP", 0],["880 CP", 0],["2400 CP", 0]]};
 let selected=games[0], selectedPack=0;
 const money=n=>"Rp "+n.toLocaleString("id-ID");
 function renderGames(filter=""){const el=document.getElementById("game-list");el.innerHTML="";games.filter(g=>g.name.toLowerCase().includes(filter.toLowerCase())).forEach(g=>{const b=document.createElement("button");b.className="game"+(g===selected?" active":"");b.innerHTML=`<span class="game-icon">${g.emoji}</span><span><strong>${g.name}</strong><small>Pilih untuk top up</small></span>`;b.onclick=()=>chooseGame(g);el.appendChild(b)})}
