@@ -45,4 +45,8 @@ document.getElementById("search").addEventListener("input",e=>renderGames(e.targ
 document.getElementById("order").onclick=()=>{const id=document.getElementById("userid").value.trim();const status=document.getElementById("status");status.style.display="block";if(!id){status.textContent="Masukkan User ID terlebih dahulu untuk mencoba alur demo.";document.getElementById("userid").focus();return}const orderId="DEMO-"+Math.random().toString(36).slice(2,8).toUpperCase();status.textContent=`Pesanan demo ${orderId} berhasil dibuat di halaman ini. Tidak ada pembayaran atau top up sungguhan yang diproses. Untuk transaksi nyata, backend, payment gateway, dan API distributor harus diintegrasikan.`};
 renderGames();renderPacks();
 </script>
-</body></html>
+<a href="https://wa.me/6281371758236?text=Halo%20FannStore%2C%20saya%20mau%20pesan%20top%20up"
+   target="_blank"
+   style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:30px;text-decoration:none;font-weight:bold;z-index:9999;">
+   Chat WhatsApp
+</a></body></html>
